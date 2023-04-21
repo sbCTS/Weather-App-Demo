@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="WeatherAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" prompt="Enter City Name" translatesAutoresizingMaskIntoConstraints="NO" id="Tdn-3Q-Km4">
+                                <rect key="frame" x="0.0" y="80" width="393" height="90"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES" textContentType="address-level2"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SvR-QD-oCK"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" separatorInsetReference="fromAutomaticInsets" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yOL-VG-T16">
+                                <rect key="frame" x="0.0" y="180" width="393" height="625"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="e6z-nT-ZMU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4qW-SQ-9dy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dFr-Ld-ww6"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="top" secondItem="Tdn-3Q-Km4" secondAttribute="top" constant="-80" id="2Rb-WR-I4l"/>
+                            <constraint firstItem="yOL-VG-T16" firstAttribute="top" secondItem="Tdn-3Q-Km4" secondAttribute="bottom" constant="10" id="IRW-Ok-f7z"/>
+                            <constraint firstItem="Tdn-3Q-Km4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Inl-YA-JKc"/>
+                            <constraint firstAttribute="bottom" secondItem="yOL-VG-T16" secondAttribute="bottom" constant="47" id="L5k-Vd-8wK"/>
+                            <constraint firstItem="Tdn-3Q-Km4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oox-pD-KUS"/>
+                            <constraint firstItem="yOL-VG-T16" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="TnD-dC-9P4"/>
+                            <constraint firstItem="yOL-VG-T16" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bzh-LK-cgc"/>
+                            <constraint firstItem="Tdn-3Q-Km4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nd7-2z-hlu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Tdn-3Q-Km4" id="cH9-O0-fYK"/>
+                        <outlet property="tableView" destination="yOL-VG-T16" id="b6k-LQ-Vbk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="1"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

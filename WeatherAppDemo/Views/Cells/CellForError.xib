@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellForError" rowHeight="120" id="HJH-h2-lhP" customClass="CellForError" customModule="WeatherAppDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HJH-h2-lhP" id="ZrD-xb-Pbf">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7i5-YN-eV2">
+                        <rect key="frame" x="28" y="0.0" width="264" height="120"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zMV-hH-YEY">
+                                <rect key="frame" x="10" y="26" width="67.666666666666671" height="68.666666666666671"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Text " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4Z-OP-wqe">
+                                <rect key="frame" x="90" y="51" width="174" height="18"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="81G-Vs-9Lx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zMV-hH-YEY" firstAttribute="leading" secondItem="7i5-YN-eV2" secondAttribute="leading" constant="10" id="8xX-o8-7xg"/>
+                            <constraint firstAttribute="trailing" secondItem="u4Z-OP-wqe" secondAttribute="trailing" id="NKZ-De-qQg"/>
+                            <constraint firstItem="zMV-hH-YEY" firstAttribute="width" secondItem="7i5-YN-eV2" secondAttribute="height" multiplier="9:16" id="ShN-XW-RIv"/>
+                            <constraint firstItem="zMV-hH-YEY" firstAttribute="height" secondItem="7i5-YN-eV2" secondAttribute="height" constant="-50" id="WHF-la-ckK"/>
+                            <constraint firstItem="u4Z-OP-wqe" firstAttribute="leading" secondItem="zMV-hH-YEY" secondAttribute="trailing" constant="12.333333333333329" id="YGr-HZ-1BQ"/>
+                            <constraint firstItem="u4Z-OP-wqe" firstAttribute="centerY" secondItem="zMV-hH-YEY" secondAttribute="centerY" id="dJe-VT-cuA"/>
+                            <constraint firstItem="zMV-hH-YEY" firstAttribute="centerY" secondItem="7i5-YN-eV2" secondAttribute="centerY" id="rHc-JM-zKe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="7i5-YN-eV2" secondAttribute="bottom" id="K20-7I-jA7"/>
+                    <constraint firstItem="7i5-YN-eV2" firstAttribute="top" secondItem="ZrD-xb-Pbf" secondAttribute="top" id="OKj-RO-nAY"/>
+                    <constraint firstItem="7i5-YN-eV2" firstAttribute="leading" secondItem="ZrD-xb-Pbf" secondAttribute="leading" constant="28" id="V08-O5-boI"/>
+                    <constraint firstAttribute="trailing" secondItem="7i5-YN-eV2" secondAttribute="trailing" constant="28" id="r7A-Cc-x6m"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="icon" destination="zMV-hH-YEY" id="fB4-U6-sV3"/>
+                <outlet property="temperatureLabel" destination="u4Z-OP-wqe" id="b1d-fQ-5s2"/>
+            </connections>
+            <point key="canvasLocation" x="-639.69465648854964" y="-102.8169014084507"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
